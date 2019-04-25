@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const body = document.body;
+    body.classList.add("login-page");
   }
 
 }
