@@ -6,6 +6,7 @@ import { PagesComponent } from './pages.component';
 import { CorsModule } from '../cors/cors.module';
 import { EventsService } from './event/events.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
     CorsModule,
     HttpClientModule
   ],
-  declarations: [PagesComponent],
+  declarations: [PagesComponent, HomeComponent],
 })
 export class PagesModule { }

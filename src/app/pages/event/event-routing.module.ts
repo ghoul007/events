@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EventListComponent } from './event-list/event-list.component';
 import { EventEditComponent } from './event-edit/event-edit.component';
+import { AuthGuard } from 'src/app/cors/auth/auth.guard';
 
 const routes: Routes = [
     {path: '', redirectTo: 'list', pathMatch: 'full'},
-    {path: 'list', component: EventListComponent},
-    {path: 'edit', component: EventEditComponent}
+    {path: 'list', component: EventListComponent, },
+    {path: 'edit', component: EventEditComponent,}
 ]
 
 @NgModule({

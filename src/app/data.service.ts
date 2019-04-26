@@ -8,11 +8,14 @@ export class DataService implements InMemoryDbService {
   createDb() {
     const users = [
       {
+        id:1,
         email: "test@gmail.com",
-        password: "test",
-        name: "test"
+        password: "Test2019",
+        login: "test"
       }
     ];
+ 
+
     const events = [
       {
         albumId: 1,

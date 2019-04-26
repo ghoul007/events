@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     HttpModule,
-    HttpClientInMemoryWebApiModule.forRoot(DataService, { dataEncapsulation: false, delay: 500   }),
+    HttpClientInMemoryWebApiModule.forRoot(DataService),
     ErrorModule
   ],
   bootstrap: [AppComponent]

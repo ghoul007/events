@@ -3,10 +3,10 @@ import { Routes, RouterModule } from "@angular/router";
 import { NotFoundComponent } from "./error/not-found/not-found.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "", pathMatch: "full" },
-  { path: "", loadChildren: "./home/home.module#HomeModule" },
-  { path: "home", loadChildren: "./pages/pages.module#PagesModule" },
-  // {path:'**', component: NotFoundComponent}
+  { path: "", redirectTo: "default", pathMatch: "full" },
+  { path: "auth", loadChildren: "./home/home.module#HomeModule"   },
+  { path: "default", loadChildren: "./pages/pages.module#PagesModule"  },
+  { path: "**", component: NotFoundComponent }
 ];
 
 @NgModule({
