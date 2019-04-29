@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnDestroy } from "@angular/core";
 import { FormBuilder, Validators, FormGroup } from "@angular/forms";
 import { UsersService } from "src/app/cors/auth/user.service";
 import { tap } from "rxjs/operators";
@@ -11,7 +11,7 @@ import { Router } from "@angular/router";
   templateUrl: "./signup.component.html",
   styleUrls: ["./signup.component.scss"]
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent implements OnInit, OnDestroy {
   signupForm: FormGroup;
   messageError: any;
   constructor(
@@ -72,5 +72,11 @@ export class SignupComponent implements OnInit {
       }
     );
     // console.log(this.signupForm.value);
+  }
+
+
+  ngOnDestroy(){
+    const body = document.body;
+    body.classList.remove("signup-page");
   }
 }
