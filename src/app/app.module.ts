@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     HttpModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
-    ErrorModule
+    ErrorModule,
   ],
   bootstrap: [AppComponent]
 })

@@ -62,7 +62,7 @@ export class EventsService {
   }
 
   private handleError(res: HttpErrorResponse | Event) {
-    console.error(res.error || res.body.error);
-    return observableThrowError(res.error || 'Server error');
+    console.error(res['error'] || res['body'].error);
+    return observableThrowError(res['error'] || 'Server error');
   }
 }

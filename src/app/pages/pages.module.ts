@@ -7,13 +7,14 @@ import { CorsModule } from '../cors/cors.module';
 import { EventsService } from './event/events.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-
+ 
 @NgModule({
   imports: [
     CommonModule,
     PagesRoutingModule,
     CorsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   declarations: [PagesComponent, HomeComponent],
 })

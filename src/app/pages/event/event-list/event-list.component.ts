@@ -14,6 +14,9 @@ export class EventListComponent implements OnInit {
   constructor(private eventsService: EventsService) {}
 
   ngOnInit() {
+
+
+    
     this.selectTag = ""
     this.eventList$ = this.eventsService.getEvents().pipe(
       tap(events => {
