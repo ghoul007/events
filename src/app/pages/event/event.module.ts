@@ -6,12 +6,14 @@ import { EventRoutingModule } from './event-routing.module';
 import { EventCardComponent } from './event-card/event-card.component';
 import { FilterModule } from 'src/app/shared/filter/filter.module';
 import { EventDetailsComponent } from './event-details/event-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     EventRoutingModule,
-    FilterModule
+    FilterModule,
+    HttpClientModule
   ],
   declarations: [EventListComponent, EventEditComponent, EventCardComponent, EventDetailsComponent],
   exports: [EventListComponent, EventEditComponent]

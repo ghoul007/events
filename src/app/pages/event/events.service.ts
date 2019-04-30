@@ -66,3 +66,9 @@ export class EventsService {
     return observableThrowError(res['error'] || 'Server error');
   }
 }
+
+
+
+
+
+

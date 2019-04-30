@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { EventsService } from "../events.service";
 import { tap } from "rxjs/operators";
+import { HttpClient } from "@angular/common/http";
+import { LoadingService } from "src/app/shared/loading/loading.service";
 
 @Component({
   selector: "app-event-list",
@@ -11,13 +13,10 @@ export class EventListComponent implements OnInit {
   eventList$: any;
   tags: any = [];
   selectTag: string;
-  constructor(private eventsService: EventsService) {}
+  constructor(private eventsService: EventsService, private http: HttpClient, private loadService: LoadingService) {}
 
   ngOnInit() {
-
-
-    
-    this.selectTag = ""
+    this.selectTag = "";
     this.eventList$ = this.eventsService.getEvents().pipe(
       tap(events => {
         this.tags = events

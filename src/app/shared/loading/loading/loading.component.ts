@@ -15,6 +15,7 @@ export class LoadingComponent implements OnInit {
   ngOnInit() {
     // this.loadingService.startLoading()
     this.loading$ = this.loadingService.getLoading() 
+    .pipe(map(loadingType => loadingType.valueOf()));
   }
 
 

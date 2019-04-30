@@ -17,14 +17,14 @@ export class LoadingInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    return next.handle(req).pipe(
-      tap(event => {
-        if (event instanceof HttpResponse) {
-          this.loadingService.stopLoading();
-        } else {
-          this.loadingService.startLoading();
-        }
-      })
-    );
+    return next
+                .handle(req)
+                .pipe(tap(event => {
+                    if (event instanceof HttpResponse) {
+                        this.loadingService.stopLoading();
+                    } else {
+                        this.loadingService.startLoading();
+                    }
+                }));
   }
 }
