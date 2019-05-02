@@ -1,10 +1,10 @@
 <div class="main main-raised">
     <div class="container" *ngIf="event$ |async as event">
+
         <div class="section section-text">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto">
                     <h3 class="title">{{event.title}}.</h3>
-
 
 
                 </div>
@@ -22,9 +22,13 @@
                         {{event.description}}
                     </p>
                 </div>
+
+            </div>
+            <div class="col-md-8 ml-auto mr-auto text-center">
+                <button [routerLink]="['/default/users']" type="button" class="btn  btn-rose   btn-round">Subscribe</button>
             </div>
         </div>
-        <div class="section section-blog-info">
+        <!-- <div class="section section-blog-info">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto">
                     <div class="row">
@@ -49,7 +53,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </div>

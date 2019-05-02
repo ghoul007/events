@@ -15,7 +15,7 @@ import { Router } from "@angular/router";
   providedIn: "root"
 })
 export class AuthService {
-  private authUrl = "api/users"; // URL to web api
+  private authUrl = "api/auth"; // URL to web api
   constructor(private http: HttpClient, private router: Router) {}
 
   /**

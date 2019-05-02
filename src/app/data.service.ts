@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 import { InMemoryDbService } from "angular-in-memory-web-api";
-
+import * as faker from "faker";
 @Injectable({
   providedIn: "root"
 })
 export class DataService implements InMemoryDbService {
   createDb() {
-    const users = [
+    const auth = [
       {
         id: 1,
         email: "test@gmail.com",
@@ -15,6 +15,28 @@ export class DataService implements InMemoryDbService {
       }
     ];
 
+    const users = Array(10)
+      .fill(null)
+      .map(e => {
+        return {
+          id: 1,
+          nom: faker.name.findName(),
+          fonction: faker.name.findName(),
+          adresse: faker.address.city(),
+          telephone: faker.phone.phoneNumber(),
+          email: faker.internet.email(),
+          pseudo: faker.name.findName(),
+          mdp: faker.name.findName(),
+          tokenn: faker.random.number({ min: 0, max: 5 }),
+          permission: faker.random.number({ min: 0, max: 5 }),
+          dateInscrit: faker.date.past(75),
+          dateArrive: faker.date.past(75),
+          statu: true,
+          parrain: faker.name.findName(),
+          interlocuteur: faker.name.findName()
+        };
+      });
+
     const events = [
       {
         tag: "angular",
@@ -22,8 +44,10 @@ export class DataService implements InMemoryDbService {
           " Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...",
         id: 1,
         title: "accusamus beatae ad facilis cum similique qui sunt",
-        url: "https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images-1.jpg",
-        thumbnailUrl: "https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images-1.jpg",
+        url:
+          "https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images-1.jpg",
+        thumbnailUrl:
+          "https://backgrounddownload.com/wp-content/uploads/2018/09/web-developer-background-images-1.jpg"
       },
       {
         tag: "angular",
@@ -108,7 +132,7 @@ export class DataService implements InMemoryDbService {
         thumbnailUrl: "https://via.placeholder.com/150/810b14"
       }
     ];
-    return { users, events };
+    return { auth, events, users };
   }
 
   constructor() {}
