@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserInscriptionComponent } from './user-inscription/user-inscription.component';
+import { InscriptionPageComponent } from './user-inscription/inscription-page.component';
 
 const routes: Routes = [
     {path: '', redirectTo: 'list', pathMatch: 'full'},
-    {path: 'list', component: UserInscriptionComponent, },
+    {path: 'list', component: InscriptionPageComponent, },
 ]
 
 @NgModule({

@@ -17,7 +17,7 @@ export class UserInscriptionComponent implements OnInit {
   initForm() {
     this.userForm = this.fb.group({
       id: ["", Validators.required],
-      nom: ["", Validators.required],
+      nom: [{value:"", disabled:true}, Validators.required],
       fonction: ["", Validators.required],
       adresse: ["", Validators.required],
       telephone: ["", Validators.required],

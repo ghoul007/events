@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" *ngIf="eventList$ | async as events">
+            <div class="row" *ngIf="eventList  as events">
                 <div class="col-md-6" *ngFor="let event of events | filter :selectTag">
                     <app-event-card [event]="event"></app-event-card>
                 </div>

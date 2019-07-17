@@ -1,0 +1,134 @@
+<div class="container ">
+
+
+    <div class="tim-title">
+        <h3>Inscription</h3>
+    </div>
+
+
+    <form [formGroup]="userForm">
+
+        <div class="row m-5">
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="nom" formControlName="nom">
+                    <app-message-error [status]="!userForm.get('nom').pristine  && userForm.get('nom').errors?.required" message="nom is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput2" placeholder="fonction" formControlName="fonction">
+                    <app-message-error [status]="!userForm.get('fonction').pristine  && userForm.get('fonction').errors?.required" message="fonction is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+        </div>
+        <div class="row m-5">
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="adresse" formControlName="adresse">
+                    <app-message-error [status]="!userForm.get('adresse').pristine  && userForm.get('adresse').errors?.required" message="adresse is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="telephone" formControlName="telephone">
+                    <app-message-error [status]="!userForm.get('telephone').pristine  && userForm.get('telephone').errors?.required" message="telephone is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row m-5">
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="email" formControlName="email">
+                    <app-message-error [status]="!userForm.get('email').pristine  && userForm.get('email').errors?.required" message="email is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="pseudo" formControlName="pseudo">
+                    <app-message-error [status]="!userForm.get('pseudo').pristine  && userForm.get('pseudo').errors?.required" message="pseudo is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+        </div>
+        <div class="row m-5">
+
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="mdp" formControlName="mdp">
+                    <app-message-error [status]="!userForm.get('mdp').pristine  && userForm.get('mdp').errors?.required" message="mdp is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="permission" formControlName="permission">
+                    <app-message-error [status]="!userForm.get('permission').pristine  && userForm.get('permission').errors?.required" message="permission is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+        </div>
+        <div class="row m-5">
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="date" formControlName="dateInscrit">
+                    <app-message-error [status]="!userForm.get('dateInscrit').pristine  && userForm.get('date').errors?.required" message="date is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="date" formControlName="dateArrive">
+                    <app-message-error [status]="!userForm.get('dateArrive').pristine  && userForm.get('date').errors?.required" message="date is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+        </div>
+        <div class="row m-5">
+
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="parrain" formControlName="parrain">
+                    <app-message-error [status]="!userForm.get('parrain').pristine  && userForm.get('parrain').errors?.required" message="parrain is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="form-group has-default">
+
+                    <input type="email" class="form-control" id="exampleInput1" placeholder="interlocuteur" formControlName="interlocuteur">
+                    <app-message-error [status]="!userForm.get('interlocuteur').pristine  && userForm.get('interlocuteur').errors?.required" message="interlocuteur is required" css='bmd-help d-block'></app-message-error>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-8 ml-auto mr-auto text-center">
+            <button type="button" class="btn  btn-rose   btn-round">Subscribe</button>
+        </div>
+
+
+
+    </form>
+</div>
